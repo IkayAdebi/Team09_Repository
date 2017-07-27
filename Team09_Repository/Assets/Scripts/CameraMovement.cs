@@ -4,13 +4,10 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
+    public string HORIZONTAL_AXIS = "Horizontal";
 	
 	// Update is called once per frame
 	void Update () {
-		
+        transform.Rotate(new Vector3(0, Input.GetAxis(HORIZONTAL_AXIS), 0));
 	}
 }
