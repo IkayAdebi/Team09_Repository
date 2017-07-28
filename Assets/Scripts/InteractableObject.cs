@@ -4,16 +4,19 @@ using UnityEngine;
 
 public class InteractableObject : MonoBehaviour {
 
-    private Rigidbody rb;
-
-    void Start()
-    {
-        rb = gameObject.GetComponent<Rigidbody>();
-    }
+    [SerializeField]
+    private bool isMouseDown = false;
 
     // On mouse down
     private void OnMouseDown()
     {
-        print("Wassup");
+        print("Mouse Down");
+        isMouseDown = true;
+    }
+
+    private void OnMouseUp()
+    {
+        print("Mouse Up");
+        isMouseDown = false;
     }
 }
